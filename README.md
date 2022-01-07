@@ -1,4 +1,4 @@
-<h1 align="center"> :ninja: 1000+, coding challenges in 2022 :computer: :computer_mouse: </h1>
+<h1 align="center"> :airplane: 1000+, coding challenges in 2022 :computer: :computer_mouse: </h1>
 
 
 In this year 2022, i have to hit 1000+ codewars challenges in my Languages(Java, Javascript, Python, and Go).
