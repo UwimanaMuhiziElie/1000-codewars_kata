@@ -11,7 +11,7 @@ NOTES:
 */
 //--------------1. display element of the array incremented by their indices----------
 
-const ArrDigits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const incrementer = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const arrayFunction = (arr) => {
     let arrResult = [];
     for(digit of arr){
@@ -19,19 +19,10 @@ const arrayFunction = (arr) => {
     }
     return arrResult;
 }
-const myDigits = arrayFunction(ArrDigits);
+const myDigits = incrementer(ArrDigits);
 
 console.log(myDigits)
 //-------------2. check the output of the first part---------------
-
-
-
-
-// const descendingOrder = (n) => {
-//     const ArrOrder = String(n).split("").sort((a, b) => a < b ? 1 : -1).join("");
-//     return ArrOrder;
-// }
-// console.log(descendingOrder(42145));
 
 
 const descendingOrder = (n) => {
@@ -69,12 +60,12 @@ The parameter of accum is a string which includes only letters from a..z and A..
 // console.log(accum("abds"));
 
 
-const mea = ["a", "b", "c", "g"];
-const answers = mea.forEach(el => {
-    el.repeat(mea[el] + 1)
-});
+// const mea = ["a", "b", "c", "g"];
+// const answers = mea.forEach(el => {
+//     el.repeat(mea[el] + 1)
+// });
 
-console.log(answers)
+// console.log(answers)
 
 
 

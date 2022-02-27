@@ -11,13 +11,17 @@ For example 2 is not a factor of 7 because: 7 % 2 = 1
 Note: base is a non-negative number, factor is a positive number.
 */
 
-const testingFactorOfBase = (base, factor) => {
-    if(base % factor === 0){
-        return `True, ${factor} is a factor of ${base}`;
-    }else{
-        return ` False, ${factor} is not a factor of ${base}`;;
-    }
-}
+// const testingFactorOfBase = (base, factor) => {
+//     if(base % factor === 0){
+//         return `True, ${factor} is a factor of ${base}`;
+//     }else{
+//         return ` False, ${factor} is not a factor of ${base}`;;
+//     }
+// }
+
+ const testingFactorOfBase = (base, factor) => {
+     return base % factor === 0;
+ }
 console.log(testingFactorOfBase(-6, 2))
 
 
@@ -62,7 +66,7 @@ console.log(reverseSequence(15))
 
 
 
-/* 
+/*  3. 
 You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
 
 Examples
@@ -73,26 +77,62 @@ Should return: 11 (the only odd number)
 Should return: 160 (the only even number)
 */
 
+
 const findOutlier = integers => {
     const oddIntegers = [];
     const evenIntegers = [];
     for(let el of integers){
         if(el % 2 === 0){
             evenIntegers.push(el)
-        } else if (el % 2 !== 0){
+        } else if (el % -2 === 0){
+            evenIntegers.push(el)
+        } else if(el % 1 === 0){
+            oddIntegers.push(el)
+        }else{
             oddIntegers.push(el)
         }
     }
-    if(oddIntegers || evenIntegers === integers){
-        return integers;
-    } else if(evenIntegers > oddIntegers){
-        return oddIntegers;
-    } else if(oddIntegers > evenIntegers ){
-        return evenIntegers;
+    if(oddIntegers.length > evenIntegers.length){
+        return Number(evenIntegers);
+    }else{
+        return Number(oddIntegers);
     }
-
 };
 
-const outlierNumber = findOutlier([252, 4721, 10, 100, 4, 110, 2602, 6]);
+const outlierNumber = findOutlier([252, 4721, 101, 100, 4, 110, 2602, 6]);
 
 console.log(`The outlier here is ${outlierNumber}`)
+
+
+/*  4.
+The Western Suburbs Croquet Club has two categories of membership, 
+Senior and Open. They would like your help with an application form 
+that will tell prospective members which category they will be placed.
+
+To be a senior, a member must be at least 55 years old and have a handicap greater than 7.
+ In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+Input
+Input will consist of a list of pairs. Each pair contains information for a single potential member.
+ Information consists of an integer for the person's age and an integer for the person's handicap.
+
+Output
+Output will consist of a list of string values (in Haskell: Open or Senior)
+ stating whether the respective member is to be placed in the senior or open category.
+
+Example
+input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+*/
+
+
+// const westernSuburbs = (arrayPairOfHandicap) => {
+//     const arrayofPairs = [];
+//     for(let pair of arrayPairOfHandicap){
+//         if(arrayPairOfHandicap[])
+//     }
+// }
+
+
+
